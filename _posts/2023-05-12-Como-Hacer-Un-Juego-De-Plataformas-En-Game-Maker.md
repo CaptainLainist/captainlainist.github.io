@@ -129,13 +129,13 @@ Añadiremos el bloque Object at place, que es para descubrir si hay un objeto en
 
  * Object será block porque será lo que detendrá la gravedad
  * x será x porque (x == x) siempre es cierto y a nosotros lo que nos importa es la coordenada y
- * y sera sprite_height que es la altura de nuestro sprite porque ahí será donde este el bloque en el caso de que estemos en el suelo a esto le aplicaremos relative que es lo mismo que decir que le sumaremos la variable que queremos asignar en este caso y, para que os ubiqueis si ponemos 4 a var sin relative sería (var = 4) pero con realtive sería (var = var + 4)
+ * y sera 1 para añadirsele justo debajo de el personaje, luego le pondremos relative que viene a decir que se suma a si mismo, por ejemplo, sin relative seria y = 1, mientras que en relative seria y = y + 1
  * finalmente marcamos not para invertir la condición, es decir esta condición se crearà cuando no esté el objeto debajo
 
 
 Ahora añadiremos el evento Execute code que nos permetra ejecutar codigo, en este caso si la condición anterior se cumple
 
-![](/assets/gamemaker/gravedad.jpg)
+![](/assets/gamemaker/gravedad.png)
 
 ```python
 /// gravedad
@@ -162,7 +162,9 @@ Esto limitará la velocidad vertical a 12.
 
 ahora añadiremos un else a la condición
 
-![](/assets/gamemaker/else.jpg)
+![](/assets/gamemaker/else2.png)
+
+![](/assets/gamemaker/else.png)
 
 Y pondremos que no haya gravedad
 
@@ -241,19 +243,19 @@ En ese evento cambiaremos los -4 por 4, es decir que en vez de ser x-4 será x+4
 
 Ahora añadiremos el evento Key Pressed Up al player y añadiremos el If Object at place que ya conocemos para checkear si hay un bloque debajo, luego en el caso de que si haya, asignaremos la variables vspeed (la velocidad vertical) a -12 contra mas se aleje el numero negativo de cero más potencia habrá de salto
 
-![](/assets/gamemaker/vspeed.jpg)
+![](/assets/gamemaker/vspeed.png)
 
 # 3.5 Cambio de sprites
 
 Volveremos un momento al left y right del player, primero al left
 
-Añadiremos el bloque Set Sprite, pondremos el sprite de correr hacia la izquierda y pondremos el frame image_number en relative, si fuera cualquier otro frame se asignaría el numero del frame en el sprite, pero al ser image_number correrá como una animación, luego añadiremos un set animation speed para asignar la velocidad del sprite, pondremos 0.5
+Añadiremos el bloque Set Sprite, pondremos el sprite de correr hacia la izquierda y pondremos el frame image_number en 0 y en relative, luego añadiremos un set animation speed para asignar la velocidad del sprite, pondremos 0.5
 
-![](/assets/gamemaker/sprite_left_corre.jpg)
+![](/assets/gamemaker/sprite_left_corre.png)
 
 Haremos lo mismo en el key down right
 
-![](/assets/gamemaker/sprite_right_corre.jpg)
+![](/assets/gamemaker/sprite_right_corre.png)
 
 Pero si cambiamos el sprite de correr mientras corremos cuando paremos de correr el sprite seguirá igual y por eso debemos añadir estos eventos
 
