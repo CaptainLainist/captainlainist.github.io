@@ -44,7 +44,7 @@ para ello abriremos yast
 
 iremos a ajustes de red
 
-![](/assets/LDAP-opensuse/2.jpg)
+![](/assets/LDAP-opensuse/2.png)
 ![](/assets/LDAP-opensuse/confred.jpg)
 
 En el caso de que en el cliente no te deje editar nada ve a opciones globales y selecciona Servicio Wicked

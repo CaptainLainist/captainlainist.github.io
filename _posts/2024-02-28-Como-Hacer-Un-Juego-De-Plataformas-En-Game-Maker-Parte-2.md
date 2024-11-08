@@ -4,30 +4,18 @@ published: true
 ---
 
 
-Después de 12 mil millones de fiesta pagana y siesta mundana, la cofradia ha decidido que debo actuar y subir parte 2 de esto XD
-
-Lo cual es una lastima, yo quería seguir viendo anime y comer doriftos hasta rebentar como un enano en la fiesta mayor y luego inculpar al partido político de turno y a los de fuera
-
-Y mira que hemos tenido buenos animes este 2023, como por ejemplo esta obra magna
-
-
-<video width="600" height="600" controls>
-  <source src="/assets/gamemaker2/squirrel_chan.mp4" type="video/mp4">
-</video>
-
-pero de la profundidad artistica de Ginga Eiyū Densetsu y de como ha convertido a toda una nación de adolescentes en edgelords elitistas que juegan al hearts of iron y escuchan versiones nightcore de himnos militares franceses y carameldansen ya hablaremos otro dia, ahora en serio
+Aquí la parte 2 de como hacer un juego de plataformas en Game Maker
 
 # 1. Enemigos
 
-Vamos a crear un enemigo, easy verdad? un simple y llano goomba, aunque en verdad será algo mucho más terrorifico
+Vamos a crear un enemigo, ¿fácil verdad? Un simple y llano goomba.
 
-![](/assets/gamemaker2/machismo.png)
+![](/assets/gamemaker2/goomba.png)
 
-Efectivamente el horrible e inhumano machismo
 
 Crearemos el objeto, ya sabeis como hacer esto
 
-![](/assets/gamemaker2/machismo2.png)
+![](/assets/gamemaker2/goomba2.png)
 
 y añadiremos el evento create al cual le añadiremos este código para que se mueva hacia la izquierda siempre
 
@@ -136,9 +124,7 @@ en el caso del enemigo, como empieza a moverse al primer frame, cuando aun es 0,
 
 # 4. Disparos
 
-Ahora aprenderemos a hacer disparos, vamos lo divertido
-
-![](/assets/gamemaker2/jp.png)
+Ahora aprenderemos a hacer disparos, vamos lo divertido.
 
 
 Creamos este sprite y objeto
@@ -212,7 +198,3 @@ y finalmente tendremos los disparos
 Bueno de momento el concilio estará contento con esto, continuaré en el futuro con una parte 3, aunque probablemente haga otra cosa antes de subirla.
 
 Quería comentar que como este es mi blog y le pego patadas voladoras en la cara cuando quiero, puede que de vez en cuanto no suba tutoriales de informática, y tal vez suba alguna review de algo, algo que comentar no se, pero principalmente voy a ir subiendo tutoriales de informática.
-
-y ahora sí me permitís debo influenciarme negativamente de todas las ideologias militaristas radicales con esta obra maestra
-
-![](/assets/gamemaker2/ginga.png)

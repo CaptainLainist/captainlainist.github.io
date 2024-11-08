@@ -3,13 +3,10 @@ title: Tutorial Básico de nmap
 published: true
 ---
 
-Buenos días chicos que tal, como va todo, se que desde el tutorial lioso que hice de como hacer LDAP en Opensuse USANDO DOS PUÑETERAS VERSIONES DIFERENTES para cliente y servidor no he subido nada, he estado aprendiendo de unos cursos de hacking en udemy y no he tenido mucho tiempo, a parte estoy de vacaciones y quiero estar del chill.
+Buenos días chicos que tal, como va todo, se que desde el tutorial  que hice de como hacer LDAP en Opensuse para cliente y servidor no he subido nada. He estado aprendiendo de unos cursos de hacking en udemy y no he tenido mucho tiempo.
 
 Pero bueno para no alargar mas la cosa he decidido subir un tutorial de nmap
 
-He aqui un mono con el que me identifico
-
-![](/assets/nmap/monke.jpg)
 
 
 # 1. Instalación
@@ -18,7 +15,7 @@ Nmap es una herramienta para escanear puertos muy util y con muchas funciones
 
 En esta instalación usaremos Linux Mint aunque cualquier distribución basada en debian que use apt-get como instalador de paquetes deberia serviros
 
-![](/assets/nmap/aptupdate.jpg)
+![](/assets/nmap/aptupdate.png)
 
 primero actualizaremos los repositorios
 
@@ -28,18 +25,18 @@ sudo apt update
 
 después instalaremos nmap
 
-![](/assets/nmap/nmapinstall.jpg)
+![](/assets/nmap/nmapinstall.png)
 
 ```bash
 sudo apt install nmap
 ```
 
-![](/assets/nmap/yalotengo.jpeg)
 
 # 2. Ojo con la ley
 
-Ojo, que usar nmap puede ser ilegal dependiendo del país que seas, asi que nada de hacer nmap a google.com y esas mierdas, para eso usaremos scanme.nmap.org una web donde legalmente es permitido hacer pruebas
+Ojo, que usar nmap puede ser ilegal dependiendo del país que seas. Asi que nada de hacer nmap a google.com. Para eso usaremos scanme.nmap.org una web donde legalmente es permitido hacer pruebas.
 
+No me responsabilizo de cualquier mal uso que hagais
 
 # 3. Uso básico
 
@@ -50,7 +47,7 @@ sudo nmap scanme.nmap.org
 ```
 
 
-![](/assets/nmap/escaneosimple.jpg)
+![](/assets/nmap/escaneosimple.png)
 
 como podemos ver nos detecta los puertos abiertos los cuales son
 
@@ -60,7 +57,7 @@ como podemos ver nos detecta los puertos abiertos los cuales son
  * nping-echo
  * Elite
 
- pero hay una pequeña cuestion, esos puertos en realidad no detecta el servicio, tansolo detecta el puerto y asigna un servicio al puerto default. Para saber que servicio corre usaremos -sV y para que solo asigne esos puertos usaremos -p
+ pero hay una pequeña cuestion, esos puertos en realidad no detecta el servicio, tansolo detecta el puerto y asigna un servicio al puerto predeterminado. Para saber que servicio corre usaremos -sV y para que solo asigne esos puertos usaremos -p
 
  En concreto se lo haremos al puerto ssh y Elite
 
@@ -69,7 +66,7 @@ como podemos ver nos detecta los puertos abiertos los cuales son
 sudo nmap -sV -p22,37331 scanme.nmap.org
 ```
 
-![](/assets/nmap/sv_puertos.jpg)
+![](/assets/nmap/sv_puertos.png)
 
 
 Como podemos ver nos detecta la version y servicio de los puertos.
@@ -87,7 +84,7 @@ y con --min-rate 5000 limitaremos la lentitud de los paquetes a 5000
 sudo nmap -sS -p- --min-rate 5000 scanme.nmap.org
 ```
 
-![](/assets/nmap/allports.jpg)
+![](/assets/nmap/allports.png)
 
 
 Vemos que salen los mismo puertos
@@ -99,7 +96,7 @@ con el parametro -T podemos medir la agrsividad del ataque, siendo -T0 muy lento
 sudo nmap -sS -p- --min-rate 5000 scanme.nmap.org -T5
 ```
 
-![](/assets/nmap/agresivo.jpg)
+![](/assets/nmap/agresivo.png)
 
 
 Si queremos hacer un escaneo de UDP podemos usar el parametro -sU
@@ -108,7 +105,7 @@ Si queremos hacer un escaneo de UDP podemos usar el parametro -sU
 sudo nmap -sU -p- --min-rate 5000 scanme.nmap.org -T5
 ```
 
-![](/assets/nmap/udp.jpg)
+![](/assets/nmap/udp.png)
 
 Como podemos ver nos detecta dns y ntp
 
@@ -118,7 +115,7 @@ Con el parametro -F nos escaneara los puertos mas conocidos haciendo asi un esca
 sudo nmap -F scanme.nmap.org
 ```
 
-![](/assets/nmap/rapido.jpg)
+![](/assets/nmap/rapido.png)
 
 como podemos ver no escanea todos los puertos
 
@@ -128,7 +125,7 @@ Con top-port podemos escanear cierto numero de puertos de mas popular a menos
 sudo nmap --top-ports 100 scanme.nmap.org
 ```
 
-![](/assets/nmap/topports.jpg)
+![](/assets/nmap/topports.png)
 
 Asi escanea solo los 100 puertos mas populares
 
@@ -139,11 +136,11 @@ Si queremos guardar el resultado en un archivo xml podemos usar el parametro -oX
 sudo nmap --top-ports 100 scanme.nmap.org -oX puertos.xml
 ```
 
-![](/assets/nmap/puertosxml.jpg)
+![](/assets/nmap/puertosxml.png)
 
 Asi quedaria el archivo
 
-![](/assets/nmap/archivoxml.jpg)
+![](/assets/nmap/archivoxml.png)
 
 Con el parametro --webxml podemos añadirle un contenido grafico xslt para hacer un reporte
 
@@ -151,11 +148,11 @@ Con el parametro --webxml podemos añadirle un contenido grafico xslt para hacer
 sudo nmap --top-ports 100 scanme.nmap.org -oX puertos.xml --webxml
 ```
 
-![](/assets/nmap/webxml.jpg)
+![](/assets/nmap/webxml.png)
 
 Si lo abrimos con firefox quedaria así
 
-![](/assets/nmap/reporte.jpg)
+![](/assets/nmap/reporte.png)
 
 
 
@@ -170,7 +167,7 @@ sudo nmap -sn 10.5.50.0/24
 ```
 
 
-![](/assets/nmap/detecciondehosts.jpg)
+![](/assets/nmap/detecciondehosts.png)
 
 Muy importante hacer esta detección con sudo ya que asi escaneara por MAC y no por ip haciendo asi mas sigilosa y rapida la detección
 
@@ -190,12 +187,12 @@ Una cosa que tiene nmap es poder usar scripts
 
 yendo a este directorio podemos listarlos
 
-![](/assets/nmap/scripts.jpg)
+![](/assets/nmap/scripts.png)
 
 y asi podemos ver que scripts hay
 
 
-![](/assets/nmap/scriptsquehay.jpg)
+![](/assets/nmap/scriptsquehay.png)
 
 Por ejemplo con este script podemos recibir informacion del servicio ntp
 
@@ -203,7 +200,7 @@ Por ejemplo con este script podemos recibir informacion del servicio ntp
 sudo nmap -sU -p123 --script=ntp-info scanme.nmap.org
 ```
 
-![](/assets/nmap/utpinfo.jpg)
+![](/assets/nmap/utpinfo.png)
 
 
 Con el script vuln podemos pasar todos los scripts de deteccion de vulnerabilidades aunque aviso que sera muy agresivo y facil de detectar ademas de tardar mucho
@@ -215,7 +212,7 @@ sudo nmap -sS -p80 --script=vuln scanme.nmap.org -T5
 ```
 
 
-![](/assets/nmap/vulns.jpg)
+![](/assets/nmap/vulns.png)
 
 Otra cosa que podemos hacer por http muy util es pasar un fuzzer para descubrir directorios ocultos
 
@@ -224,13 +221,12 @@ Otra cosa que podemos hacer por http muy util es pasar un fuzzer para descubrir 
 sudo nmap -sS -T5 -p80 --script=http-enum scanme.nmap.org
 ```
 
-![](/assets/nmap/ningunoxd.jpg)
+![](/assets/nmap/ningunoxd.png)
 
-Como podemos ver no ha detectado ningun directorio el pinche nmap
+Como podemos ver no ha detectado ningun directorio el nmap
 
-![](/assets/nmap/taco.jpeg)
 
 Y bueno aunque hay mucho mas, eso es todo por hoy, siempre podeis marcaros un nmap --help para ver todas las opciones o ir a la web oficial para ver todos los scripts que podeis usar
 
 
-En fin, hasta la proxima y tened un buen dia
+En fin, hasta la proxima y tened un buen dia.

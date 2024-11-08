@@ -7,95 +7,84 @@ Buenos días gente, ¿como va todo? Hoy vamos a apartarnos un poco de temas de s
 
 # 1. Introducción
 
-Para este tutorial usaremos Game Maker Studio 2, la qual es gratuita pero si quieres exportar tu juego tienes que pagar mensualmente por cada més que quieras poder exportarlo. Si es que son unos ratas, aquí teneis a los creadores de Game Maker
-
-![](/assets/gamemaker/rata.jpg)
-
-![](/assets/gamemaker/rata2.jpg)
-
-![](/assets/gamemaker/rata3.jpg)
-
-![](/assets/gamemaker/rata4.jpg)
+Para este tutorial usaremos Game Maker Studio 2, la qual es gratuita pero si quieres exportar tu juego tienes que pagar mensualmente por cada més que quieras poder exportarlo.
 
 # 2. Creación de sprites
 
 Lo primero que deberemos crear son los sprites, un sprite es basicamente una textura que se usa para juegos 2D
 
-![](/assets/gamemaker/sprite.jpg)
+![](/assets/gamemaker/sprite.png)
 
 Iremos a la carpeta de sprites y crearemos un sprite
 
-![](/assets/gamemaker/edit_image.jpg)
+![](/assets/gamemaker/edit_image.png)
 
-Ahora editaremos el sprite y dibujaremos a nuestro personaje: el señor indigno
+Ahora editaremos el sprite y dibujaremos a nuestro personaje
 
-![](/assets/gamemaker/monigote.jpg)
+![](/assets/gamemaker/monigote.png)
 
-Sin duda el señor indigno es un ser muy indigno e humillante, una blasfemia para la existencia, pero bueno sigamos a lo nuestro
 
-![](/assets/gamemaker/duplicar.jpg)
+Ahora duplicaremos el sprite para que mire hacia el otro lado, para hacerlo seleccionaremos al sprite, pulsaremos Ctrl+X para cortarlo
 
-Ahora duplicaremos el sprite del señor indigno para que mire hacia el otro lado, para hacerlo seleccionaremos al sprite, pulsaremos Ctrl+X para cortarlo
+![](/assets/gamemaker/duplicar.png)
 
-![](/assets/gamemaker/seleccionar.jpg)
+
+![](/assets/gamemaker/seleccionar.png)
 
 luego pulsaremos este boton para girarlo horizontalmente
 
-![](/assets/gamemaker/girar.jpg)
+![](/assets/gamemaker/girar.png)
 
 y clicaremos donde queramos que se ponga el nuevo sprite
 
-![](/assets/gamemaker/otro_lao.jpg)
+![](/assets/gamemaker/otro_lao.png)
 
 
 Ahora crearemos los sprites de cuando corre
 
-![](/assets/gamemaker/corre1.jpg)
+![](/assets/gamemaker/corre1.png)
 
 para añadir un frame debemos pulsar ese botón marcado con un + y luego dibujar el nuevo frame
 
-![](/assets/gamemaker/corre2.jpg)
+![](/assets/gamemaker/corre2.png)
 
 Como solo tenemos dos frames, pondremos pocos fps en la animación del personaje, en este caso 5
 
-![](/assets/gamemaker/frames.jpg)
+![](/assets/gamemaker/frames.png)
 
-De paso pondremos todos los sprites del señor indigno en colision fullimage y rectangle, el area de colisión será el area del sprite que aplicará código cuando choque con el area de colisión de otro objeto, es decir en idioma GAMER es la hitbox.
+De paso pondremos todos los sprites del personaje en colision fullimage y rectangle, el area de colisión será el area del sprite que aplicará código cuando choque con el area de colisión de otro objeto, es decir en jerga gamer es la hitbox.
 
-![](/assets/gamemaker/fullimage.jpg)
+![](/assets/gamemaker/fullimage.png)
 
-![](/assets/gamemaker/joker.jpg)
 
 En ese tono grisaceo oscuro podemos ver cual será el area de colisión
 
-![](/assets/gamemaker/grisaceo.jpg)
+![](/assets/gamemaker/grisaceo.png)
 
 Cabe decir que tener la misma area de colisión en un mismo objeto en todos los sprites es muy importante (en la mayoria de casos), ya que si tenemos diferentes areas de colisión es muy probable que nuestro personaje se quede atrapado en el suelo o las paredes.
 
-![](/assets/gamemaker/otro_corre.jpg)
+![](/assets/gamemaker/otro_corre.png)
 
 Finalmente duplicaremos el sprite para que corra hacia el otro lado
 
-Ahora crearemos un ultimo sprite para crear el suelo, en mi caso importaré esta imagen
+Ahora crearemos un ultimo sprite para crear el suelo, en mi caso importaré esta imagen.
 
-![](/assets/gamemaker/roma.jpg)
-
-Efectivamente es Roma Gallardo, el salvador de la humanidad, gracias a él la sociedad española se mantiene a flote.
+![](/assets/gamemaker/dirt_minecraft.png)
 
 Importaremos la imagen con el botón import
 
-![](/assets/gamemaker/import.jpg)
+![](/assets/gamemaker/import.png)
 
 Clicaremos sobre ese boton para asignar un tamaño adecuado
 
 
-![](/assets/gamemaker/maximizar.jpg)
+![](/assets/gamemaker/maximizar.png)
 
-![](/assets/gamemaker/sesentaycuatro.jpg)
+![](/assets/gamemaker/sesentaycuatro.png)
 
 finalmente cambiaremos el nombre de los sprites
 
-![](/assets/gamemaker/cambiar.jpg)
+![](/assets/gamemaker/cambiar.png)
 
 # 3. Creación de objetos
 
@@ -103,29 +92,29 @@ Ahora crearemos los objetos
 
 Crearemos nuestro primer objeto así
 
-![](/assets/gamemaker/create_obj.jpg)
+![](/assets/gamemaker/create_obj.png)
 
 Le pondremos de nombre player y el sprite que tendrá por defecto
 
-![](/assets/gamemaker/object_player.jpg)
+![](/assets/gamemaker/object_player.png)
 
 Luego crearemos el bloque de la misma manera
 
-![](/assets/gamemaker/block.jpg)
+![](/assets/gamemaker/block.png)
 
 Ahora añadiremos el evento Step al player, que será un evento que se ejecutará cada frame
 
-![](/assets/gamemaker/add_event.jpg)
+![](/assets/gamemaker/add_event.png)
 
 Nos pedirá si queremos usar Drag and Drop visual o GML, usaremos Visual ya que también podemos meterle código de esa forma
 
-![](/assets/gamemaker/visual.jpg)
+![](/assets/gamemaker/visual.png)
 
 ## 3.1 Gravedad
 
 Añadiremos el bloque Object at place, que es para descubrir si hay un objeto en una localización en concreto o no, y marcaremos estas opciones.
 
-![](/assets/gamemaker/object_at_place.jpg)
+![](/assets/gamemaker/object_at_place.png)
 
  * Object será block porque será lo que detendrá la gravedad
  * x será x porque (x == x) siempre es cierto y a nosotros lo que nos importa es la coordenada y
@@ -145,7 +134,7 @@ gravity = 0.5
 
 este código dice que la dirección de la gravedad será 270 (es decir abajo) y la potencia de la gravedad serà 0.5, la gravedad se diferencia de la velocidad vertical en que va creciendo por cada frame. Pero hay que limitarla, por eso modificaremos el codigo y pondremos esto
 
-![](/assets/gamemaker/limitar_velocidad_vertical.jpg)
+![](/assets/gamemaker/limitar_velocidad_vertical.png)
 
 ```python
 /// gravedad
@@ -168,7 +157,7 @@ ahora añadiremos un else a la condición
 
 Y pondremos que no haya gravedad
 
-![](/assets/gamemaker/gravity_no.jpg)
+![](/assets/gamemaker/gravity_no.png)
 
 ```python
 /// gravedad no
@@ -183,11 +172,11 @@ Pero hay algo crucial en todo esto: que pasa si la velocidad vertical es alta y 
 
 Crearemos el evento de colision con el bloque
 
-![](/assets/gamemaker/collison_block.jpg)
+![](/assets/gamemaker/collison_block.png)
 
 Y añadiremos este codigo
 
-![](/assets/gamemaker/codigo_colision.jpg)
+![](/assets/gamemaker/codigo_colision.png)
 
 ```python
 /// collision
@@ -212,7 +201,7 @@ Ahora crearemos el movimiento
 
 Crearemos el evento left de keyboard down en el player, el qual será la flecha izquierda en el teclado
 
-![](/assets/gamemaker/left.jpg)
+![](/assets/gamemaker/left.png)
 
 cabe decir que existen 3 diferentes tipos de eventos de pulsaciones de teclado
 
@@ -222,21 +211,21 @@ cabe decir que existen 3 diferentes tipos de eventos de pulsaciones de teclado
 
 volveremos a añadir el bloque if object at place, y miraremos esta vez si la localizacion x-4 tiene algun bloque de colision
 
-![](/assets/gamemaker/object_left.jpg)
+![](/assets/gamemaker/object_left.png)
 
 Si no tiene ningun bloque de colision en x-4 añadiremos este bloque
 
-![](/assets/gamemaker/jump_to_point.jpg)
+![](/assets/gamemaker/jump_to_point.png)
 
 el cual nos teletransportará a x-4, hay que tener en cuenta que en los juegos no existe el movimiento solo teletransportes a pequeña escala por frame, asi si no existe ningun bloque en x-4 nos moveremos hacia x-4
 
 Ahora duplicaremos el evento y haremos que sea KeyDown Right
 
-![](/assets/gamemaker/duplicar_evento.jpg)
+![](/assets/gamemaker/duplicar_evento.png)
 
 En ese evento cambiaremos los -4 por 4, es decir que en vez de ser x-4 será x+4
 
-![](/assets/gamemaker/cuatro.jpg)
+![](/assets/gamemaker/cuatro.png)
 
 
 # 3.4 Salto
@@ -261,11 +250,11 @@ Pero si cambiamos el sprite de correr mientras corremos cuando paremos de correr
 
 Key up left
 
-![](/assets/gamemaker/keyupleft.jpg)
+![](/assets/gamemaker/keyupleft.png)
 
 y key up right
 
-![](/assets/gamemaker/keyupright.jpg)
+![](/assets/gamemaker/keyupright.png)
 
 a los cuales pondremos que el sprite sea el quieto
 
@@ -273,22 +262,20 @@ a los cuales pondremos que el sprite sea el quieto
 
 Crearemos una room
 
-![](/assets/gamemaker/room.jpg)
+![](/assets/gamemaker/room.png)
 
 Y le pondremos los objetos
 
-![](/assets/gamemaker/room2.jpg)
+![](/assets/gamemaker/room2.png)
 
 Finalmente iremos a play
 
-![](/assets/gamemaker/play.jpg)
+![](/assets/gamemaker/play.png)
 
 Y podremos probar nuestra demo
 
-![](/assets/gamemaker/juego.jpg)
+![](/assets/gamemaker/final.png)
 
 # 5. Fin
 
-Más adelante haré una parte 2 de esta demo. pero por ahora nos debemos despedir que debo mi madre está estresada y esta moviendo los muebles de mi habitación sin mi permiso
-
-![](/assets/gamemaker/hard.jpg)
+Más adelante haré una parte 2 de esta demo. Hasta la proxima!
