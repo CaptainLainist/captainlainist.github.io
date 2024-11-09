@@ -1,6 +1,6 @@
 ---
 title: Como configurar LDAP en OpenSuse Leap 42.2 (Server) y OpenSuse Leap 15 (cliente) mediante YaST
-published: true
+published: false
 ---
 
 
